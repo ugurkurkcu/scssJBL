@@ -1,0 +1,15 @@
+.about{
+    &__container{
+        row-gap: 56px;
+    }
+    &__data{
+        text-align: center;
+    }
+    &__description{
+        margin-bottom: 24px;
+    }
+    &__image{
+        width: 280px;
+        justify-self: center;
+    }
+}

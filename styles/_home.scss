@@ -1,0 +1,114 @@
+:root {
+  --header-height: 56px;
+  --first-color: hsl(23, 100%, 50%);
+  --gradient-color: linear-gradient(
+    90deg,
+    hsl(23, 4%, 28%) 0%,
+    hsl(23, 4%, 8%) 100%
+  );
+  --white-color: hsl(0, 0%, 100%);
+  --text-color: hsl(23, 4%, 60%);
+  --body-color: hsl(23, 12%, 4%);
+  --container-color: hsl(23, 4%, 10%);
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 160px;
+  --h1-font-size: 24px;
+  --h2-font-size: 19.2px;
+  --h3-font-size: 16px;
+  --normal-font-size: 15px;
+  --small-font-size: 13px;
+  --smaller-font-size: 12px;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /* z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+.home {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 112px 16px;
+    row-gap: 40px;
+  }
+  &__content {
+    position: relative;
+    display: grid;
+    justify-self: center;
+  }
+  &__img {
+    width: 220px;
+  }
+  &__title {
+    font-size: var(--biggest-font-size);
+    display: flex;
+    column-gap: 4px;
+    color: var(--first-color);
+    position: absolute;
+    justify-self: center;
+    top: -32px;
+    span:nth-child(2) {
+      z-index: -1;
+    }
+  }
+  &__tooltip {
+    position: absolute;
+    top: -8px;
+    right: 24px;
+    &-img {
+      width: 60px;
+    }
+    &-text {
+      background: var(--gradient-color);
+      padding: 4px 12px;
+      color: var(--white-color);
+      font-weight: var(--font-medium);
+      border-radius: 64px;
+      font-size: var(--small-font-size);
+      position: absolute;
+      transform: translate(60px, -40px);
+      white-space: nowrap;
+    }
+  }
+  &__social {
+    display: grid;
+    justify-content: center;
+    row-gap: 96px;
+    position: absolute;
+    top: 144px;
+    left: -24px;
+    &-text {
+      position: relative;
+      rotate: 90deg;
+      font-size: var(--small-font-size);
+      font-weight: var(--font-medium);
+      &::after {
+        content: "";
+        width: 48px;
+        height: 1px;
+        background-color: var(--text-color);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -64px;
+        margin: auto;
+      }
+    }
+    &-links {
+      display: grid;
+      row-gap: 12px;
+      margin-left: 22px;
+    }
+    &-link {
+      font-size: 20px;
+      color: var(--text-color);
+      &:hover {
+        color: var(--first-color);
+        transition: color 0.4s;
+      }
+    }
+  }
+}
