@@ -1,6 +1,7 @@
 .footer {
   padding-block: 32px;
   overflow: hidden;
+  display: grid;
   margin-left: 40px;
   &__container {
     row-gap: 64px;
@@ -11,20 +12,23 @@
     color: var(--first-color);
   }
   &__data {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   &__title {
     font-size: var(--h3-font-size);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   &__links {
     display: grid;
     row-gap: 12px;
   }
-  &__link:hover {
-    transition: color 0.3s;
-    cursor: pointer;
-    color: var(--first-color);
+  &__link {
+    color: var(--text-color);
+    &:hover {
+      transition: color 0.3s;
+      cursor: pointer;
+      color: var(--first-color);
+    }
   }
   &__group {
     display: grid;
@@ -49,8 +53,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    a {
-      color: var(--white-color);
+    margin-top: 40px;
+    flex-direction: column;
+    div {
+      display: flex;
+      gap: 16px;
+      margin: 10px;
+      a {
+        color: var(--text-color);
+        &:hover {
+          transition: all .3s ease-in-out;
+          color: var(--first-color);
+        }
+      }
     }
   }
 }
