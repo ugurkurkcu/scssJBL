@@ -4,4 +4,6 @@
 
 <p>HTML-SASS kullanıldı. </br> Responsive yapı kullanıldı</p>
 
-![](screen.gif)
+![](screen-1.gif)
+
+![](screen-2.gif)
